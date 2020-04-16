@@ -42,7 +42,8 @@ const MovieSearch = () => {
 						toggle();
 					}}
 					value={name}
-					onChange={e => {newTitle(e); fade();}}
+					onInput={e => newTitle(e)}
+					onChange={fade}
 			/>
 			<MovieCard data={movieData} fadeIn={fadeIn} />
 	    </Container>
