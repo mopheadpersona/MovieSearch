@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieCard from './MovieCard';
 import Search from './Search';
-import { Spinner, Alert } from 'reactstrap';
+import { Spinner, Alert, Container } from 'reactstrap';
 
 const MovieSearch = () => {
 	
@@ -35,7 +35,7 @@ const MovieSearch = () => {
 	}
 
 	return(
-		<div className="container">
+		<Container className="themed-container">
 			<Search onSubmit={e => {
 						e.preventDefault(); 
 						filmData();
@@ -45,7 +45,7 @@ const MovieSearch = () => {
 					onChange={e => {newTitle(e); fade();}}
 			/>
 			<MovieCard data={movieData} fadeIn={fadeIn} />
-	    </div>
+	    </Container>
 	);
 }
 
